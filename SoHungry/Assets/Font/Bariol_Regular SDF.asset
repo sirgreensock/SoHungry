@@ -8,11 +8,11 @@ MonoBehaviour:
   m_GameObject: {fileID: 0}
   m_Enabled: 1
   m_EditorHideFlags: 0
-  m_Script: {fileID: -667331979, guid: 4dc6ca1813ea55247b9b16a3e967fcd2, type: 3}
+  m_Script: {fileID: -667331979, guid: 89f0137620f6af44b9ba852b4190e64e, type: 3}
   m_Name: Bariol_Regular SDF
   m_EditorClassIdentifier: 
   hashCode: 105271983
-  material: {fileID: 21990907898060312}
+  material: {fileID: 21403709443843600}
   materialHashCode: 1353739076
   fontAssetType: 1
   m_fontInfo:
@@ -37,7 +37,7 @@ MonoBehaviour:
     Padding: 5
     AtlasWidth: 512
     AtlasHeight: 512
-  atlas: {fileID: 28781918121918110}
+  atlas: {fileID: 28252513834137078}
   m_glyphInfoList:
   - id: 32
     x: 6
@@ -969,7 +969,7 @@ MonoBehaviour:
   boldSpacing: 7
   italicStyle: 35
   tabSize: 10
---- !u!21 &21990907898060312
+--- !u!21 &21403709443843600
 Material:
   serializedVersion: 6
   m_ObjectHideFlags: 0
@@ -1000,7 +1000,7 @@ Material:
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _MainTex:
-        m_Texture: {fileID: 28781918121918110}
+        m_Texture: {fileID: 28252513834137078}
         m_Scale: {x: 1, y: 1}
         m_Offset: {x: 0, y: 0}
     - _OutlineTex:
@@ -1068,7 +1068,7 @@ Material:
     - _ReflectOutlineColor: {r: 0, g: 0, b: 0, a: 1}
     - _SpecularColor: {r: 1, g: 1, b: 1, a: 1}
     - _UnderlayColor: {r: 0, g: 0, b: 0, a: 0.5}
---- !u!28 &28781918121918110
+--- !u!28 &28252513834137078
 Texture2D:
   m_ObjectHideFlags: 0
   m_PrefabParentObject: {fileID: 0}
