@@ -1,0 +1,32 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:693623be4a36e944e137d21d340138df:a45f05aa56f2cbe130e7c24ffbcfb68d:a7b976efa8621ff1d6ce8593d10b134f$
+#
+:format=40300
+:texture=Background_Grass.png
+:size=512x512
+:pivotpoints=enabled
+:borders=disabled
+
+Grass01;235;317;142;73; 0.5;0.5; 0;0;0;0
+Grass02;442;202;60;66; 0.5;0.5; 0;0;0;0
+Grass03;1;371;232;140; 0.5;0.5; 0;0;0;0
+Grass04;376;212;64;56; 0.5;0.5; 0;0;0;0
+Grass05;394;428;97;83; 0.5;0.5; 0;0;0;0
+Grass06;483;387;21;39; 0.5;0.5; 0;0;0;0
+Grass07;1;204;82;86; 0.5;0.5; 0;0;0;0
+Grass08;235;392;157;119; 0.5;0.5; 0;0;0;0
+Grass09;379;270;124;90; 0.5;0.5; 0;0;0;0
+Grass10;121;289;86;80; 0.5;0.5; 0;0;0;0
+Grass11;209;230;82;85; 0.5;0.5; 0;0;0;0
+Grass12;1;292;118;77; 0.5;0.5; 0;0;0;0
+Grass13;85;235;78;52; 0.5;0.5; 0;0;0;0
+Grass14;293;247;81;68; 0.5;0.5; 0;0;0;0
+Grass15;85;183;66;50; 0.5;0.5; 0;0;0;0
+Grass16;1;163;66;39; 0.5;0.5; 0;0;0;0
+Grass17;394;362;87;64; 0.5;0.5; 0;0;0;0
+Grass18;165;251;42;36; 0.5;0.5; 0;0;0;0

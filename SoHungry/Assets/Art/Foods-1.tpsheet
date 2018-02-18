@@ -1,0 +1,28 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:4d05b515c7811f6fe8aea8dc22977a0b:0131ccf032fc777550ccfaaa9a1ab3ce:71baa48cb17cdb1075ccc2d3958aba54$
+#
+:format=40300
+:texture=Foods-1.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+
+FOOD-Broccoli-01;1;1567;480;480; 0.5;0.5; 0;0;0;0
+FOOD-Broccoli-02;1;1085;480;480; 0.5;0.5; 0;0;0;0
+FOOD-ChocoStrawberry-01;1;603;480;480; 0.5;0.5; 0;0;0;0
+FOOD-ChocoStrawberry-02;1;121;480;480; 0.5;0.5; 0;0;0;0
+FOOD-JamCookie-01;483;1567;480;480; 0.5;0.5; 0;0;0;0
+FOOD-JamCookie-02;965;1567;480;480; 0.5;0.5; 0;0;0;0
+FOOD-Pizza-01;1447;1567;480;480; 0.5;0.5; 0;0;0;0
+FOOD-Pizza-02;483;1085;480;480; 0.5;0.5; 0;0;0;0
+FOOD-Sandwich-01;483;603;480;480; 0.5;0.5; 0;0;0;0
+FOOD-Sandwich-02;483;121;480;480; 0.5;0.5; 0;0;0;0
+FOOD-StrawTart-01;965;1085;480;480; 0.5;0.5; 0;0;0;0
+FOOD-StrawTart-02;1447;1085;480;480; 0.5;0.5; 0;0;0;0
+FOOD-Watermelon-01;965;603;480;480; 0.5;0.5; 0;0;0;0
+FOOD-Watermelon-02;965;121;480;480; 0.5;0.5; 0;0;0;0
