@@ -1,0 +1,21 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:6fe9233923dff54fc9adffadefef8a80:6f60712f8379760ff1cce01879e8cfb0:582fc6f2cce8019133d3b4854ae055ee$
+#
+:format=40300
+:texture=GameplayUI.png
+:size=1024x1024
+:pivotpoints=enabled
+:borders=disabled
+
+sohungry-GameplayUI-Bar-Base;1;102;92;921; 0.5;0.5; 0;0;0;0
+sohungry-GameplayUI-Bar-EmptyFill;95;102;92;921; 0.5;0.5; 0;0;0;0
+sohungry-GameplayUI-Bar-Fill;189;102;92;921; 0.5;0.5; 0;0;0;0
+sohungry-GameplayUI-MoodMarker-01VeryHungry;1;7;125;93; 0.5;0.5; 0;0;0;0
+sohungry-GameplayUI-MoodMarker-02Hungry;128;7;125;93; 0.5;0.5; 0;0;0;0
+sohungry-GameplayUI-MoodMarker-03Content;255;7;125;93; 0.5;0.5; 0;0;0;0
+sohungry-GameplayUI-MoodMarker-bubble;382;930;125;93; 0.5;0.5; 0;0;0;0
