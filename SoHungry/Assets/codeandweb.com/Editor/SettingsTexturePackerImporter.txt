@@ -1,9 +1,15 @@
 version: 2
-importPivots: 1
+importPivots: 0
 tpsheetFileNames:
+- Assets/Art/UI/GameplayUI.tpsheet
+- Assets/Art/UI/ResultsUI.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
+- Assets/Art/UI/GameplayUI.png
+- Assets/Art/UI/ResultsUI.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
+- 
 - Assets/codeandweb.com/Example/SpriteSheet/sprites_n.png
 enableDebugOutput: 0
