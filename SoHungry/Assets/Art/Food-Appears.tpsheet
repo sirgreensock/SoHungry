@@ -1,0 +1,24 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# http://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:f11f978a511411cc4718d7957fab8266:9a4eeb1b89a4c87b544e7993deef0984:44214a6b8d9406d368d7dd3b4892c034$
+#
+:format=40300
+:texture=Food-Appears.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+
+sohungry-food-Appearance-01;1;777;233;270; 1.0429184549356223;0.8425925925925926; 0;0;0;0
+sohungry-food-Appearance-02;1;1049;239;198; 0.9748953974895398;1.1742424242424243; 0;0;0;0
+sohungry-food-Appearance-03;374;1387;348;223; 0.8591954022988506;1.1143497757847534; 0;0;0;0
+sohungry-food-Appearance-04;1;1249;371;361; 0.9245283018867925;0.6966759002770083; 0;0;0;0
+sohungry-food-Appearance-05;374;883;324;502; 0.8117283950617284;0.500996015936255; 0;0;0;0
+sohungry-food-Appearance-06;1414;1185;475;539; 0.5368421052631579;0.4703153988868275; 0;0;0;0
+sohungry-food-Appearance-07;733;1624;679;423; 0.4698085419734904;0.6796690307328606; 0;0;0;0
+sohungry-food-Appearance-08;1;1612;730;435; 0.5068493150684932;0.6609195402298851; 0;0;0;0
+sohungry-food-Appearance-09;733;1232;644;390; 0.4968944099378882;0.6730769230769231; 0;0;0;0
+sohungry-food-Appearance-10;1414;1726;570;321; 0.5543859649122806;0.48753894080996885; 0;0;0;0
