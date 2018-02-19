@@ -1,0 +1,228 @@
+fileFormatVersion: 2
+guid: cdd50ad1b0b076b42828c47daff0ba04
+timeCreated: 1519060344
+licenseType: Free
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: Food-Appears
+    21300002: sohungry-food-Appearance-01
+    21300004: sohungry-food-Appearance-02
+    21300006: sohungry-food-Appearance-03
+    21300008: sohungry-food-Appearance-04
+    21300010: sohungry-food-Appearance-05
+    21300012: sohungry-food-Appearance-06
+    21300014: sohungry-food-Appearance-07
+    21300016: sohungry-food-Appearance-08
+    21300018: sohungry-food-Appearance-09
+    21300020: sohungry-food-Appearance-10
+  externalObjects: {}
+  serializedVersion: 4
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -1
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 0
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spritePixelsToUnits: 100
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-01
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 777
+        width: 233
+        height: 270
+      alignment: 9
+      pivot: {x: 1.0429184, y: 0.8425926}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-02
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1049
+        width: 239
+        height: 198
+      alignment: 9
+      pivot: {x: 0.9748954, y: 1.1742424}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-03
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 1387
+        width: 348
+        height: 223
+      alignment: 9
+      pivot: {x: 0.8591954, y: 1.1143497}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-04
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1249
+        width: 371
+        height: 361
+      alignment: 9
+      pivot: {x: 0.9245283, y: 0.6966759}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-05
+      rect:
+        serializedVersion: 2
+        x: 374
+        y: 883
+        width: 324
+        height: 502
+      alignment: 9
+      pivot: {x: 0.8117284, y: 0.500996}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-06
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 1185
+        width: 475
+        height: 539
+      alignment: 9
+      pivot: {x: 0.5368421, y: 0.4703154}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-07
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1624
+        width: 679
+        height: 423
+      alignment: 9
+      pivot: {x: 0.46980855, y: 0.679669}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-08
+      rect:
+        serializedVersion: 2
+        x: 1
+        y: 1612
+        width: 730
+        height: 435
+      alignment: 9
+      pivot: {x: 0.5068493, y: 0.66091955}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-09
+      rect:
+        serializedVersion: 2
+        x: 733
+        y: 1232
+        width: 644
+        height: 390
+      alignment: 9
+      pivot: {x: 0.49689442, y: 0.6730769}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-food-Appearance-10
+      rect:
+        serializedVersion: 2
+        x: 1414
+        y: 1726
+        width: 570
+        height: 321
+      alignment: 9
+      pivot: {x: 0.55438596, y: 0.48753893}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    outline: []
+    physicsShape: []
+  spritePackingTag: 
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
