@@ -1,0 +1,19 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:e6609422633c8be2e9014a5769b8cf00:ea3002749ceb719aeaaf8e35a36cb475:6d28f8bd996c1901d690acb04743ad54$
+#
+:format=40300
+:texture=Title-mouth.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+
+Title_drool-1;1;144;345;329; 0.5;0.5; 0;0;0;0
+Title_drool-2;1;480;293;376; 0.5;0.5; 0;0;0;0
+Title_drool-3;1;863;297;418; 0.5;0.5; 0;0;0;0
+Title_drool-4;301;535;355;321; 0.5;0.5; 0;0;0;0
+Title_mouth1;1;1288;1756;759; 0.5;0.5; 0;0;0;0
