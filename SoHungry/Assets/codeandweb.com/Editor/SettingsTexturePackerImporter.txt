@@ -4,6 +4,7 @@ tpsheetFileNames:
 - Assets/Art/Background_Grass.tpsheet
 - Assets/Art/Food-Appears.tpsheet
 - Assets/Art/Foods-1.tpsheet
+- Assets/Art/Title Screen/Title-mouth.tpsheet
 - Assets/Art/UI/GameplayUI.tpsheet
 - Assets/Art/UI/ResultsUI.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
@@ -11,10 +12,12 @@ textureFileNames:
 - Assets/Art/Background_Grass.png
 - Assets/Art/Food-Appears.png
 - Assets/Art/Foods-1.png
+- Assets/Art/Title Screen/Title-mouth.png
 - Assets/Art/UI/GameplayUI.png
 - Assets/Art/UI/ResultsUI.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
 - 
 - 
 - 
