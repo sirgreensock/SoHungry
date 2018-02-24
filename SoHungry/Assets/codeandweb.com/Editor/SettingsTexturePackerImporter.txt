@@ -7,6 +7,8 @@ tpsheetFileNames:
 - Assets/Art/Title Screen/Title-mouth.tpsheet
 - Assets/Art/UI/GameplayUI.tpsheet
 - Assets/Art/UI/ResultsUI.tpsheet
+- Assets/Art/YellowGuy.tpsheet
+- Assets/Art/YG-Lose.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
 - Assets/Art/Background_Grass.png
@@ -15,8 +17,12 @@ textureFileNames:
 - Assets/Art/Title Screen/Title-mouth.png
 - Assets/Art/UI/GameplayUI.png
 - Assets/Art/UI/ResultsUI.png
+- Assets/Art/YellowGuy.png
+- Assets/Art/YG-Lose.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
+- 
 - 
 - 
 - 

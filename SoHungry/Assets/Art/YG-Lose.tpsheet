@@ -1,0 +1,23 @@
+#
+# Sprite sheet data for Unity.
+#
+# To import these sprites into your Unity project, download "TexturePackerImporter":
+# https://www.codeandweb.com/texturepacker/unity
+#
+# $TexturePacker:SmartUpdate:049cddd9c5e938ac828d27792b491f26:cc796a3bef00567659c80740e28935d8:899f6c887b097f53b1dde483e84435c5$
+#
+:format=40300
+:texture=YG-Lose.png
+:size=2048x2048
+:pivotpoints=enabled
+:borders=disabled
+
+sohungry-character-head-lose-eyes1;413;1068;399;93; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-eyes2;7;1059;399;102; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-mouth2;819;957;248;204; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-mouth3;7;762;248;223; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-mouth4;1648;992;248;252; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-mouth5;1648;1251;272;180; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-mouth6;1179;1087;462;344; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-mouth7;1179;1438;801;603; 0.5;0.5; 0;0;0;0
+sohungry-character-head-lose-mouth8;7;1168;1165;873; 0.5;0.5; 0;0;0;0

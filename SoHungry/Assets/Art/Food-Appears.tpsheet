@@ -2,9 +2,9 @@
 # Sprite sheet data for Unity.
 #
 # To import these sprites into your Unity project, download "TexturePackerImporter":
-# http://www.codeandweb.com/texturepacker/unity
+# https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:f11f978a511411cc4718d7957fab8266:9a4eeb1b89a4c87b544e7993deef0984:44214a6b8d9406d368d7dd3b4892c034$
+# $TexturePacker:SmartUpdate:3f74f91eba38191eef072d5e3fdb91f9:9a4eeb1b89a4c87b544e7993deef0984:44214a6b8d9406d368d7dd3b4892c034$
 #
 :format=40300
 :texture=Food-Appears.png
