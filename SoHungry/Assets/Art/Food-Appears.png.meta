@@ -77,6 +77,16 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
+  - buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
@@ -84,12 +94,12 @@ TextureImporter:
       name: sohungry-food-Appearance-01
       rect:
         serializedVersion: 2
-        x: 1
-        y: 777
-        width: 233
-        height: 270
-      alignment: 9
-      pivot: {x: 1.0429184, y: 0.8425926}
+        x: 3
+        y: 1753
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -98,12 +108,12 @@ TextureImporter:
       name: sohungry-food-Appearance-02
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1049
-        width: 239
-        height: 198
-      alignment: 9
-      pivot: {x: 0.9748954, y: 1.1742424}
+        x: 382
+        y: 1753
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -112,12 +122,12 @@ TextureImporter:
       name: sohungry-food-Appearance-03
       rect:
         serializedVersion: 2
-        x: 374
-        y: 1387
-        width: 348
-        height: 223
-      alignment: 9
-      pivot: {x: 0.8591954, y: 1.1143497}
+        x: 761
+        y: 1753
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -126,12 +136,12 @@ TextureImporter:
       name: sohungry-food-Appearance-04
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1249
-        width: 371
-        height: 361
-      alignment: 9
-      pivot: {x: 0.9245283, y: 0.6966759}
+        x: 1140
+        y: 1753
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -140,12 +150,12 @@ TextureImporter:
       name: sohungry-food-Appearance-05
       rect:
         serializedVersion: 2
-        x: 374
-        y: 883
-        width: 324
-        height: 502
-      alignment: 9
-      pivot: {x: 0.8117284, y: 0.500996}
+        x: 1519
+        y: 1753
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -154,10 +164,10 @@ TextureImporter:
       name: sohungry-food-Appearance-06
       rect:
         serializedVersion: 2
-        x: 1414
-        y: 1185
-        width: 475
-        height: 539
+        x: 3
+        y: 1455
+        width: 373
+        height: 292
       alignment: 9
       pivot: {x: 0.5368421, y: 0.4703154}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,12 +178,12 @@ TextureImporter:
       name: sohungry-food-Appearance-07
       rect:
         serializedVersion: 2
-        x: 733
-        y: 1624
-        width: 679
-        height: 423
-      alignment: 9
-      pivot: {x: 0.46980855, y: 0.679669}
+        x: 3
+        y: 1157
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -182,12 +192,12 @@ TextureImporter:
       name: sohungry-food-Appearance-08
       rect:
         serializedVersion: 2
-        x: 1
-        y: 1612
-        width: 730
-        height: 435
-      alignment: 9
-      pivot: {x: 0.5068493, y: 0.66091955}
+        x: 3
+        y: 859
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -196,12 +206,12 @@ TextureImporter:
       name: sohungry-food-Appearance-09
       rect:
         serializedVersion: 2
-        x: 733
-        y: 1232
-        width: 644
-        height: 390
-      alignment: 9
-      pivot: {x: 0.49689442, y: 0.6730769}
+        x: 3
+        y: 561
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
@@ -210,12 +220,12 @@ TextureImporter:
       name: sohungry-food-Appearance-10
       rect:
         serializedVersion: 2
-        x: 1414
-        y: 1726
-        width: 570
-        height: 321
-      alignment: 9
-      pivot: {x: 0.55438596, y: 0.48753893}
+        x: 3
+        y: 263
+        width: 373
+        height: 292
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
       outline: []
       physicsShape: []
