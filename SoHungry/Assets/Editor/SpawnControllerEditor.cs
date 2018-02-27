@@ -4,17 +4,17 @@ using UnityEngine;
 using UnityEngine.UI;
 using UnityEditor;
 
-[CustomEditor(typeof(GameManager))]
-public class GameManagerDebug : Editor
+[CustomEditor(typeof(SpawnController))]
+public class SpawnControllerEditor : Editor
 {
     public override void OnInspectorGUI()
     {
         DrawDefaultInspector();
 
-        GameManager myScript = (GameManager)target;
-        if (GUILayout.Button("TestSpawner"))
+        SpawnController myScript = (SpawnController)target;
+        if (GUILayout.Button("Test Spawner"))
         {
-            myScript.ChooseSpawn();
+            myScript.SpawnItem();
         }
     }
 }
