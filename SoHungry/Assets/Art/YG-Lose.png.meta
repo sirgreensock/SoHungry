@@ -1,20 +1,19 @@
 fileFormatVersion: 2
-guid: cdd50ad1b0b076b42828c47daff0ba04
-timeCreated: 1519060344
+guid: 84b00a25110d3a242b9edc8155329c6c
+timeCreated: 1519434625
 licenseType: Free
 TextureImporter:
   fileIDToRecycleName:
-    21300000: Food-Appears
-    21300002: sohungry-food-Appearance-01
-    21300004: sohungry-food-Appearance-02
-    21300006: sohungry-food-Appearance-03
-    21300008: sohungry-food-Appearance-04
-    21300010: sohungry-food-Appearance-05
-    21300012: sohungry-food-Appearance-06
-    21300014: sohungry-food-Appearance-07
-    21300016: sohungry-food-Appearance-08
-    21300018: sohungry-food-Appearance-09
-    21300020: sohungry-food-Appearance-10
+    21300000: YG-Lose
+    21300002: sohungry-character-head-lose-eyes1
+    21300004: sohungry-character-head-lose-eyes2
+    21300006: sohungry-character-head-lose-mouth2
+    21300008: sohungry-character-head-lose-mouth3
+    21300010: sohungry-character-head-lose-mouth4
+    21300012: sohungry-character-head-lose-mouth5
+    21300014: sohungry-character-head-lose-mouth6
+    21300016: sohungry-character-head-lose-mouth7
+    21300018: sohungry-character-head-lose-mouth8
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -77,27 +76,17 @@ TextureImporter:
     allowsAlphaSplitting: 0
     overridden: 0
     androidETC2FallbackOverride: 0
-  - buildTarget: Standalone
-    maxTextureSize: 2048
-    resizeAlgorithm: 0
-    textureFormat: -1
-    textureCompression: 1
-    compressionQuality: 50
-    crunchedCompression: 0
-    allowsAlphaSplitting: 0
-    overridden: 0
-    androidETC2FallbackOverride: 0
   spriteSheet:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: sohungry-food-Appearance-01
+      name: sohungry-character-head-lose-eyes1
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1753
-        width: 373
-        height: 292
+        x: 413
+        y: 1068
+        width: 399
+        height: 93
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -105,13 +94,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-02
+      name: sohungry-character-head-lose-eyes2
       rect:
         serializedVersion: 2
-        x: 382
-        y: 1753
-        width: 373
-        height: 292
+        x: 7
+        y: 1059
+        width: 399
+        height: 102
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -119,13 +108,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-03
+      name: sohungry-character-head-lose-mouth2
       rect:
         serializedVersion: 2
-        x: 761
-        y: 1753
-        width: 373
-        height: 292
+        x: 819
+        y: 957
+        width: 248
+        height: 204
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -133,13 +122,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-04
+      name: sohungry-character-head-lose-mouth3
       rect:
         serializedVersion: 2
-        x: 1140
-        y: 1753
-        width: 373
-        height: 292
+        x: 7
+        y: 762
+        width: 248
+        height: 223
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,13 +136,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-05
+      name: sohungry-character-head-lose-mouth4
       rect:
         serializedVersion: 2
-        x: 1519
-        y: 1753
-        width: 373
-        height: 292
+        x: 1648
+        y: 992
+        width: 248
+        height: 252
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -161,27 +150,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-06
+      name: sohungry-character-head-lose-mouth5
       rect:
         serializedVersion: 2
-        x: 3
-        y: 1455
-        width: 373
-        height: 292
-      alignment: 9
-      pivot: {x: 0.5368421, y: 0.4703154}
-      border: {x: 0, y: 0, z: 0, w: 0}
-      outline: []
-      physicsShape: []
-      tessellationDetail: -1
-    - serializedVersion: 2
-      name: sohungry-food-Appearance-07
-      rect:
-        serializedVersion: 2
-        x: 3
-        y: 1157
-        width: 373
-        height: 292
+        x: 1648
+        y: 1251
+        width: 272
+        height: 180
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -189,13 +164,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-08
+      name: sohungry-character-head-lose-mouth6
       rect:
         serializedVersion: 2
-        x: 3
-        y: 859
-        width: 373
-        height: 292
+        x: 1179
+        y: 1087
+        width: 462
+        height: 344
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -203,13 +178,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-09
+      name: sohungry-character-head-lose-mouth7
       rect:
         serializedVersion: 2
-        x: 3
-        y: 561
-        width: 373
-        height: 292
+        x: 1179
+        y: 1438
+        width: 801
+        height: 603
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -217,13 +192,13 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: -1
     - serializedVersion: 2
-      name: sohungry-food-Appearance-10
+      name: sohungry-character-head-lose-mouth8
       rect:
         serializedVersion: 2
-        x: 3
-        y: 263
-        width: 373
-        height: 292
+        x: 7
+        y: 1168
+        width: 1165
+        height: 873
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
