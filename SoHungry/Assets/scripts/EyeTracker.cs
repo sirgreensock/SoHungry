@@ -4,12 +4,14 @@ using UnityEngine;
 
 public class EyeTracker : MonoBehaviour {
 
+    [Header("Bounding Box Objects")]
+    [Tooltip("Bounding box objects used to limit movement")]
     public GameObject[] boundingObject; //Object to set bounds of followObject
+    [Header("Follow Objects")]
+    [Tooltip("Objects that follow mouse movement")]
     public GameObject[] followObject; //Objects to follow cursor
     
     //sets up min/max local position values     
-    public float minDistance = -0.5f;
-    public float maxDistance = 0.5f;
     private float[] minX;
     private float[] maxX;
     private float[] minY;
