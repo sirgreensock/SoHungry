@@ -47,6 +47,8 @@ TextureImporter:
     21300080: sohungry-character-head-opening4-mouth-8
     21300082: sohungry-characterShadow
     21300084: sohungry-character-face-mouth-00
+    21300086: sohungry-character-face-eyes01-A
+    21300088: sohungry-character-face-eyes01-B
   externalObjects: {}
   serializedVersion: 4
   mipmaps:
@@ -228,6 +230,34 @@ TextureImporter:
         y: 1517
         width: 46
         height: 40
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-character-face-eyes01-A
+      rect:
+        serializedVersion: 2
+        x: 963
+        y: 658
+        width: 142
+        height: 118
+      alignment: 0
+      pivot: {x: 0.5, y: 0.5}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: -1
+    - serializedVersion: 2
+      name: sohungry-character-face-eyes01-B
+      rect:
+        serializedVersion: 2
+        x: 1328
+        y: 610
+        width: 138
+        height: 112
       alignment: 0
       pivot: {x: 0.5, y: 0.5}
       border: {x: 0, y: 0, z: 0, w: 0}
