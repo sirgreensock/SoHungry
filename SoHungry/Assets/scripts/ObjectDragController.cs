@@ -111,7 +111,10 @@ public class ObjectDragController : MonoBehaviour {
 	{
 		draggingItem = false; //an item isnt being dragged
         validItem = false; //no valid item selected
-        draggedObject.GetComponent<SpriteRenderer>().sortingOrder = defaultSortingLayer; //reset sorting layer of dropped item
+        if (draggedObject != null)
+        {
+            draggedObject.GetComponent<SpriteRenderer>().sortingOrder = defaultSortingLayer; //reset sorting layer of dropped item
+        }
     }
 	
 
