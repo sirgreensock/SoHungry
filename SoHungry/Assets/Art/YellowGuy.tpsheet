@@ -4,7 +4,7 @@
 # To import these sprites into your Unity project, download "TexturePackerImporter":
 # https://www.codeandweb.com/texturepacker/unity
 #
-# $TexturePacker:SmartUpdate:dd2e7bb908b247b28385344c0ab8379a:244697a45d5f823600f2190ffa4641ae:b293fe4754280c8aa5e76831d705dac7$
+# $TexturePacker:SmartUpdate:96f793e6136ad0d28dd17e33143b136f:9fe340d6648ef5b3b8d5a4e0fae75b19:b293fe4754280c8aa5e76831d705dac7$
 #
 :format=40300
 :texture=YellowGuy.png
@@ -20,6 +20,8 @@ sohungry-character-body-03;1954;1978;77;65; 0.5;0.5; 0;0;0;0
 sohungry-character-body-04;2010;1526;33;31; 0.5;0.5; 0;0;0;0
 sohungry-character-body-05;1954;1567;68;78; 0.5;0.5; 0;0;0;0
 sohungry-character-body-06;1954;1517;46;40; 0.5;0.5; 0;0;0;0
+sohungry-character-face-eyes01-A;963;658;142;118; 0.5;0.5; 0;0;0;0
+sohungry-character-face-eyes01-B;1328;610;138;112; 0.5;0.5; 0;0;0;0
 sohungry-character-face-eyes01;5;768;413;152; 0.5;0.5; 0;0;0;0
 sohungry-character-face-eyes02;1954;1772;71;114; 0.5;0.5; 0;0;0;0
 sohungry-character-face-eyes03;1954;1655;71;107; 0.5;0.5; 0;0;0;0
