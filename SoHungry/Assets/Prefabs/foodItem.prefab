@@ -24,7 +24,7 @@ GameObject:
   - component: {fileID: 50794109512282552}
   - component: {fileID: 114646123867823456}
   m_Layer: 0
-  m_Name: Star-Good
+  m_Name: foodImage
   m_TagString: GoodTarget
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
@@ -38,13 +38,14 @@ GameObject:
   serializedVersion: 5
   m_Component:
   - component: {fileID: 4695021340553584}
+  - component: {fileID: 114639118601574742}
   m_Layer: 0
-  m_Name: StarParent
+  m_Name: foodItem
   m_TagString: FoodItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!4 &4695021340553584
 Transform:
   m_ObjectHideFlags: 1
@@ -52,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1648539443916030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalPosition: {x: -6.37, y: -1.01, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4781326071121238}
@@ -67,7 +68,7 @@ Transform:
   m_GameObject: {fileID: 1574851415957632}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
   m_LocalPosition: {x: 0, y: 0, z: 0}
-  m_LocalScale: {x: 0.5, y: 0.5, z: 1}
+  m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 4695021340553584}
   m_RootOrder: 0
@@ -108,15 +109,41 @@ BoxCollider2D:
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
     pivot: {x: 0.5, y: 0.5}
-    oldSize: {x: 5.12, y: 5.12}
-    newSize: {x: 5.12, y: 5.12}
+    oldSize: {x: 4.8, y: 4.8}
+    newSize: {x: 4.8, y: 4.8}
     adaptiveTilingThreshold: 0.5
     drawMode: 0
     adaptiveTiling: 0
   m_AutoTiling: 0
   serializedVersion: 2
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 1.5, y: 1.5}
   m_EdgeRadius: 0
+--- !u!114 &114639118601574742
+MonoBehaviour:
+  m_ObjectHideFlags: 1
+  m_PrefabParentObject: {fileID: 0}
+  m_PrefabInternal: {fileID: 100100000}
+  m_GameObject: {fileID: 1648539443916030}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 2b537b7c4b2495544b5b6f270d228868, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  foodAnimator: {fileID: 1574851415957632}
+  foodImage: {fileID: 1574851415957632}
+  foodOptions:
+  - foodName: Butts
+    foodTag: GoodTarget
+    foodSprite: {fileID: 21300006, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+    foodOutline: {fileID: 21300008, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  - foodName: Butts2
+    foodTag: GoodTarget
+    foodSprite: {fileID: 21300010, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+    foodOutline: {fileID: 21300012, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  - foodName: Butts3
+    foodTag: BadTarget
+    foodSprite: {fileID: 21300002, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+    foodOutline: {fileID: 21300004, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
 --- !u!114 &114646123867823456
 MonoBehaviour:
   m_ObjectHideFlags: 1
@@ -162,12 +189,12 @@ SpriteRenderer:
   m_SortingLayerID: 0
   m_SortingLayer: 0
   m_SortingOrder: 10
-  m_Sprite: {fileID: 21300000, guid: 73cbe4c062ed8124e8cab33c4d88a535, type: 3}
-  m_Color: {r: 0.41911763, g: 1, b: 0.54330623, a: 1}
+  m_Sprite: {fileID: 21300006, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  m_Color: {r: 1, g: 1, b: 1, a: 1}
   m_FlipX: 0
   m_FlipY: 0
   m_DrawMode: 0
-  m_Size: {x: 5.12, y: 5.12}
+  m_Size: {x: 4.8, y: 4.8}
   m_AdaptiveModeThreshold: 0.5
   m_SpriteTileMode: 0
   m_WasSpriteAssigned: 1

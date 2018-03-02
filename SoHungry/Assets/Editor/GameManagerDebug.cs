@@ -12,9 +12,9 @@ public class GameManagerDebug : Editor
         DrawDefaultInspector();
 
         GameManager myScript = (GameManager)target;
-        if (GUILayout.Button("TestSpawner"))
+        if (GUILayout.Button("TestButton"))
         {
-            myScript.ChooseSpawn();
+           // myScript.ChooseSpawn();
         }
     }
 }
