@@ -10,8 +10,18 @@ public class SpawnController : MonoBehaviour
     [SerializeField]
     int maxObjectCount;
 
-    private int currentObjectCount;
-    private float waitTime;    
+    private int currentObjectCount = 0;
+    private float waitTime = 0;    
+
+    public int CurrentObjectCount
+    {
+        get { return currentObjectCount; }        
+    }
+
+    public float WaitTime
+    {
+        set { waitTime = value; }
+    }
 
     //Check SpawnPoints are valid, disable them to start
     void OnEnable()    {
@@ -27,39 +37,50 @@ public class SpawnController : MonoBehaviour
         }
     }
 
+    //Spawn item at selected spawn
     public void SpawnItem()
     {
+        int spawnID = Random.Range(0, SpawnPoints.Length);
         GameObject spawnPoint = ChooseSpawn();
         GameObject spawnedItem = ObjectPooler.SharedInstance.GetPooledObject("FoodItem");
-        
-        spawnedItem.transform.position = spawnPoint.transform.position;
-        spawnedItem.SetActive(true);
-        ResetSpawn(spawnPoint);
+        if (spawnedItem != null && currentObjectCount <= maxObjectCount)
+        {
+            spawnedItem.transform.position = spawnPoint.transform.position;
+            spawnedItem.GetComponent<FoodController>().SpawnObject = spawnPoint;
+            spawnedItem.SetActive(true);
+            currentObjectCount++;
+            //ResetSpawn(spawnPoint);
+        } else
+        {
+            Debug.Log("Reached Limit of food items!");
+        }       
     }
 
     //Select a disabled spawn's position
     public GameObject ChooseSpawn()
-    {
-        float spawnID = Random.Range(0, SpawnPoints.Length);
-
-        for (int i = 0; i > SpawnPoints.Length; i++ )
+    {       
+        int spawnID = Random.Range(0, SpawnPoints.Length);
+        while (SpawnPoints[spawnID].activeInHierarchy)
         {
-            if (!SpawnPoints[i].activeInHierarchy)
-            {
-                SpawnPoints[i].SetActive(true);
-                return SpawnPoints[i];
-            } else
-            {
-                continue;
-            }          
+            spawnID = Random.Range(0, SpawnPoints.Length);
         }
 
-        Debug.LogWarning("No valid spawn points found, using default");
-        return SpawnPoints[0];
+        return SpawnPoints[spawnID];        
     }
 
+    //Make spawn point available again
     public void ResetSpawn(GameObject oldSpawn)
     {
         oldSpawn.SetActive(false);
+    }
+
+    //Reset object to make room for new ones
+    public void ResetItem(GameObject oldObject)
+    {
+        Debug.Log("I am vanquished!");
+        currentObjectCount--;
+        GameObject oldSpawnObject = oldObject.GetComponent<FoodController>().SpawnObject;
+        oldObject.SetActive(false);
+        ResetSpawn(oldSpawnObject);
     }
 }

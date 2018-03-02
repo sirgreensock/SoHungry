@@ -5,27 +5,48 @@ using UnityEngine.UI;
 using DG.Tweening;
 
 public class GameManager : MonoBehaviour {
-    [Header("Initialization")]
-    [SerializeField]
-    GameObject[] SpawnPoints;
+    private bool gameStart;
+    private bool gamePaused;
+    private int Timer;
 
-	// Use this for initialization
+
 	void Start () {
         DOTween.Init(false, true, LogBehaviour.ErrorsOnly);
-        if (SpawnPoints.Length <= 0)
-        {
-            Debug.LogError("No Spawn Points set!");
-        }
 	}
 	
-	// Update is called once per frame
 	void Update () {
-		
+		if (gameStart)
+        {
+            //Do game stuff
+        } else
+        {
+            //Do other stuff
+        }
+       
 	}
 
-    public void ChooseSpawn()
+    private void InitGame()
     {
-        float spawnID = Random.Range(0, SpawnPoints.Length);
-        Debug.Log(spawnID);
+        //Set up game init components
+    }
+
+    private void StartGame()
+    {
+        //Begin game logic
+    }
+
+    private void TimeControl()
+    {
+        //keep track of timer and timescale
+    }
+
+    private void EndGame()
+    {
+        //do game debrief stuff
+    }
+
+    private void ResetGame()
+    {
+        //Start game over again
     }
 }

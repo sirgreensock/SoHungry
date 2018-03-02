@@ -67,7 +67,8 @@ public class ScoreController : MonoBehaviour {
         gameScore++;
         gameObject.GetComponent<ObjectDragController>().DropItem();
         heldObject.gameObject.tag = "Untagged";
-        heldObject.gameObject.SetActive(false);
+        //heldObject.gameObject.transform.parent.gameObject.SetActive(false);
+        gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.gameObject);
         scoreText.text = gameScore.ToString();
         SetScoreSlider(gameScore);
     }
@@ -78,7 +79,7 @@ public class ScoreController : MonoBehaviour {
         gameScore--;
         gameObject.GetComponent<ObjectDragController>().DropItem();
         heldObject.gameObject.tag = "Untagged";
-        heldObject.gameObject.SetActive(false);
+        heldObject.gameObject.transform.parent.gameObject.SetActive(false);        
         scoreText.text = gameScore.ToString();
         SetScoreSlider(gameScore);
     }

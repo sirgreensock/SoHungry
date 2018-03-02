@@ -8,6 +8,7 @@ tpsheetFileNames:
 - Assets/Art/UI/GameplayUI.tpsheet
 - Assets/Art/UI/ResultsUI.tpsheet
 - Assets/Art/YellowGuy.tpsheet
+- Assets/art/YellowGuy.tpsheet
 - Assets/Art/YG-Lose.tpsheet
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.tpsheet
 textureFileNames:
@@ -18,9 +19,11 @@ textureFileNames:
 - Assets/Art/UI/GameplayUI.png
 - Assets/Art/UI/ResultsUI.png
 - Assets/Art/YellowGuy.png
+- Assets/art/YellowGuy.png
 - Assets/Art/YG-Lose.png
 - Assets/codeandweb.com/Example/SpriteSheet/sprites.png
 normalmapFileNames:
+- 
 - 
 - 
 - 

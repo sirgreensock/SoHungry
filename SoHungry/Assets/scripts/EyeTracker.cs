@@ -85,10 +85,10 @@ public class EyeTracker : MonoBehaviour {
 
             //min = (bounding object size/2 - follow object size/2) * -1
             //max = bounding object size/2 - follow object size/2
-            minX[i] = (boundingObjectWidth / 2 - followObjectWidth/2) * -1f;
-            maxX[i] = boundingObjectWidth / 2 - followObjectWidth / 2;
-            minY[i] = (boundingObjectHeight / 2 - followObjectHeight / 2) * -1f;
-            maxY[i] = boundingObjectHeight / 2 - followObjectHeight / 2;
+            minX[i] = ((boundingObjectWidth / 2 - followObjectWidth/2 ) * -1f) - 0.08f;
+            maxX[i] = (boundingObjectWidth / 2 - followObjectWidth / 2) + 0.08f;
+            minY[i] = ((boundingObjectHeight / 2 - followObjectHeight / 2) * -1f) - 0.15f;
+            maxY[i] = (boundingObjectHeight / 2 - followObjectHeight / 2) +0.15f;
         }
 
     }

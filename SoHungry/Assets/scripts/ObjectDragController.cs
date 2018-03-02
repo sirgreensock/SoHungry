@@ -91,6 +91,7 @@ public class ObjectDragController : MonoBehaviour {
 
                         var hitLayer = draggedObject.GetComponent<SpriteRenderer>();
                         hitLayer.sortingOrder = targetSortingLayer; //raise item on sorting layer
+                        draggedObject.transform.parent.gameObject.GetComponent<FoodController>().GrabItem();
                     }
                 }
 
@@ -114,6 +115,7 @@ public class ObjectDragController : MonoBehaviour {
         if (draggedObject != null)
         {
             draggedObject.GetComponent<SpriteRenderer>().sortingOrder = defaultSortingLayer; //reset sorting layer of dropped item
+            draggedObject.transform.parent.gameObject.GetComponent<FoodController>().DropItem();
         }
     }
 	
