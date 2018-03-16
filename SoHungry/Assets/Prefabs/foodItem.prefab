@@ -23,7 +23,7 @@ GameObject:
   - component: {fileID: 61102671695848704}
   - component: {fileID: 50794109512282552}
   - component: {fileID: 114646123867823456}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foodImage
   m_TagString: GoodTarget
   m_Icon: {fileID: 0}
@@ -39,13 +39,13 @@ GameObject:
   m_Component:
   - component: {fileID: 4695021340553584}
   - component: {fileID: 114639118601574742}
-  m_Layer: 0
+  m_Layer: 8
   m_Name: foodItem
   m_TagString: FoodItem
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &4695021340553584
 Transform:
   m_ObjectHideFlags: 1
@@ -53,7 +53,7 @@ Transform:
   m_PrefabInternal: {fileID: 100100000}
   m_GameObject: {fileID: 1648539443916030}
   m_LocalRotation: {x: -0, y: -0, z: -0, w: 1}
-  m_LocalPosition: {x: -6.37, y: -1.01, z: 0}
+  m_LocalPosition: {x: -5.91, y: -0.32, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children:
   - {fileID: 4781326071121238}
@@ -129,21 +129,39 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 2b537b7c4b2495544b5b6f270d228868, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  foodAnimator: {fileID: 1574851415957632}
+  foodLifetime: 3
+  foodSpeed: 6
+  foodAnimator: {fileID: 1648539443916030}
   foodImage: {fileID: 1574851415957632}
   foodOptions:
-  - foodName: Butts
+  - foodName: Chocolate Strawberry
     foodTag: GoodTarget
     foodSprite: {fileID: 21300006, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
     foodOutline: {fileID: 21300008, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Butts2
+  - foodName: Jam Cookie
     foodTag: GoodTarget
     foodSprite: {fileID: 21300010, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
     foodOutline: {fileID: 21300012, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Butts3
+  - foodName: Broccoli
     foodTag: BadTarget
     foodSprite: {fileID: 21300002, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
     foodOutline: {fileID: 21300004, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  - foodName: Pizza
+    foodTag: BadTarget
+    foodSprite: {fileID: 21300014, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+    foodOutline: {fileID: 21300016, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  - foodName: Sandwich
+    foodTag: BadTarget
+    foodSprite: {fileID: 21300018, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+    foodOutline: {fileID: 21300020, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  - foodName: Strawberry Tart
+    foodTag: GoodTarget
+    foodSprite: {fileID: 21300022, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+    foodOutline: {fileID: 21300024, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  - foodName: Watermelon
+    foodTag: GoodTarget
+    foodSprite: {fileID: 21300026, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+    foodOutline: {fileID: 21300028, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
 --- !u!114 &114646123867823456
 MonoBehaviour:
   m_ObjectHideFlags: 1

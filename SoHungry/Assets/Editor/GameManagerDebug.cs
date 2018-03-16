@@ -2,6 +2,7 @@
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
+using TMPro;
 using UnityEditor;
 
 [CustomEditor(typeof(GameManager))]
@@ -12,9 +13,13 @@ public class GameManagerDebug : Editor
         DrawDefaultInspector();
 
         GameManager myScript = (GameManager)target;
-        if (GUILayout.Button("TestButton"))
+        if (GUILayout.Button("StartGame"))
         {
-           // myScript.ChooseSpawn();
+           myScript.StartGame();
+        }
+        if (GUILayout.Button("StopGame"))
+        {
+            myScript.EndGame();
         }
     }
 }

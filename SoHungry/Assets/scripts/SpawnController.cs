@@ -6,18 +6,30 @@ using UnityEngine.UI;
 public class SpawnController : MonoBehaviour
 {
     [SerializeField]
-    GameObject[] SpawnPoints;
+    GameObject[] SpawnPoints; //Spawn points to choose from
     [SerializeField]
-    int maxObjectCount;
+    int maxObjectCount; //Number of objects allowed on screen at once
+    [SerializeField]
+    float waitMinimum;
+    [SerializeField]
+    float waitMaximum;
 
-    private int currentObjectCount = 0;
-    private float waitTime = 0;    
-
+    private bool spawningAllowed;
+    public bool SpawningAllowed
+    {
+        get { return spawningAllowed; }
+        set { spawningAllowed = value; }
+    }
+    
+    private int currentObjectCount = 0; //Current number of objects on screen
     public int CurrentObjectCount
     {
         get { return currentObjectCount; }        
     }
 
+    private int objectsToSpawn;
+
+    private float waitTime = 0;  //wait time between spawns
     public float WaitTime
     {
         set { waitTime = value; }
@@ -37,19 +49,64 @@ public class SpawnController : MonoBehaviour
         }
     }
 
+    void Update()
+    {
+
+        if (spawningAllowed)
+        {
+            if (currentObjectCount < maxObjectCount && (objectsToSpawn + currentObjectCount) < maxObjectCount)
+            {
+                objectsToSpawn = maxObjectCount - currentObjectCount;
+
+                Spawner(objectsToSpawn);                        
+            } 
+            
+        } else
+        {
+            StopAllCoroutines();
+            List<GameObject> objectPool = gameObject.GetComponent<ObjectPooler>().pooledObjects;
+            for (int i = 0; i < objectPool.Count; i++)
+            {
+                objectPool[i].SetActive(false);
+            }
+        }
+    }
+
+    private void Spawner(int spawnCount)
+    {             
+            for (int i = 0; i < spawnCount; i++)
+            {
+                StartCoroutine("SpawnTimer");
+            }            
+    }
+
+    //Spawn item after waiting X seconds
+    IEnumerator SpawnTimer()
+    {
+        waitTime = Random.Range(waitMinimum, waitMaximum);
+
+        yield return new WaitForSeconds(waitTime);
+        SpawnItem();
+        objectsToSpawn--;
+        yield return null;     
+    }
+
     //Spawn item at selected spawn
     public void SpawnItem()
     {
         int spawnID = Random.Range(0, SpawnPoints.Length);
         GameObject spawnPoint = ChooseSpawn();
         GameObject spawnedItem = ObjectPooler.SharedInstance.GetPooledObject("FoodItem");
-        if (spawnedItem != null && currentObjectCount <= maxObjectCount)
+        if (spawnedItem != null && currentObjectCount < maxObjectCount)
         {
+            //set spawn controller in food item
+            spawnedItem.GetComponent<FoodController>().SpawnController = gameObject;
+
             spawnedItem.transform.position = spawnPoint.transform.position;
             spawnedItem.GetComponent<FoodController>().SpawnObject = spawnPoint;
             spawnedItem.SetActive(true);
-            currentObjectCount++;
-            //ResetSpawn(spawnPoint);
+            spawnPoint.SetActive(true);
+            currentObjectCount++;            
         } else
         {
             Debug.Log("Reached Limit of food items!");
@@ -76,8 +133,7 @@ public class SpawnController : MonoBehaviour
 
     //Reset object to make room for new ones
     public void ResetItem(GameObject oldObject)
-    {
-        Debug.Log("I am vanquished!");
+    {     
         currentObjectCount--;
         GameObject oldSpawnObject = oldObject.GetComponent<FoodController>().SpawnObject;
         oldObject.SetActive(false);

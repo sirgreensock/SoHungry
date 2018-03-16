@@ -12,9 +12,13 @@ public class SpawnControllerEditor : Editor
         DrawDefaultInspector();
 
         SpawnController myScript = (SpawnController)target;
-        if (GUILayout.Button("Test Spawner"))
+        if (GUILayout.Button("Start Spawner"))
         {
-            myScript.SpawnItem();
+            myScript.SpawningAllowed = true;
+        }
+        if (GUILayout.Button("Stop Spawner"))
+        {
+            myScript.SpawningAllowed = false;
         }
     }
 }
