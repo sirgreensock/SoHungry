@@ -10,9 +10,15 @@ public class ScoreController : MonoBehaviour {
     [SerializeField]
     GameObject mouthCollider;
     [SerializeField]
-    Text scoreText;
-    [SerializeField]
     Slider scoreSlider;
+    [SerializeField]
+    Image sliderFace;
+    [SerializeField]
+    Sprite sadFace;
+    [SerializeField]
+    Sprite neutralFace;
+    [SerializeField]
+    Sprite happyFace;
 
     private GameObject heldObject; //object that dropped in mouth
     private float sliderMin = 1.5f; //1.5f = minimum value that looks nice on slider
@@ -39,14 +45,6 @@ public class ScoreController : MonoBehaviour {
             Debug.LogWarning("No Mouth Collider set!");
         }
 
-        if (scoreText !=null)
-        {
-            scoreText.text = gameScore.ToString();
-        } else
-        {
-            Debug.LogWarning("No Score Text set!");
-        }
-
         if (scoreSlider != null)
         {
             scoreTween = gameScore;
@@ -59,28 +57,26 @@ public class ScoreController : MonoBehaviour {
 	// Update is called once per frame
 	void Update () {
         scoreSlider.value = scoreTween;
+        HandleSliderFace();
     }
     
-    //Increase score
+    //Increase score, set item to reset
     public void GoodTarget(Collider2D heldObject)
     {
         gameScore++;
         gameObject.GetComponent<ObjectDragController>().DropItem();
         heldObject.gameObject.tag = "Untagged";
-        //heldObject.gameObject.transform.parent.gameObject.SetActive(false);
-        gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.gameObject);
-        scoreText.text = gameScore.ToString();
+        gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.parent.gameObject);
         SetScoreSlider(gameScore);
     }
 
-    //Reduce score
+    //Reduce score, set item to reset
     public void BadTarget(Collider2D heldObject)
     {
         gameScore--;
         gameObject.GetComponent<ObjectDragController>().DropItem();
         heldObject.gameObject.tag = "Untagged";
-        heldObject.gameObject.transform.parent.gameObject.SetActive(false);        
-        scoreText.text = gameScore.ToString();
+        gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.parent.gameObject);
         SetScoreSlider(gameScore);
     }
 
@@ -90,6 +86,25 @@ public class ScoreController : MonoBehaviour {
         newScore = Mathf.Clamp(newScore, sliderMin, 100f); //100f some big number, we only care about min here
         DOTween.To(()=> scoreTween, x => scoreTween = x, newScore, 0.5f);
                
+    }
+
+    private void HandleSliderFace()
+    {
+        if (gameScore < 8f)
+        {
+            //set sad face
+            sliderFace.sprite = sadFace;
+        }
+        if (gameScore > 8f && gameScore < 15f)
+        {
+            //set neutral face
+            sliderFace.sprite = neutralFace;
+        }
+        if (gameScore > 15f)
+        {
+            //set happy face
+            sliderFace.sprite = happyFace;
+        }
     }
 }
 

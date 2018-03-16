@@ -6,7 +6,8 @@ public class ObjectDragController : MonoBehaviour {
 
 	private bool draggingItem = false;
 	private GameObject draggedObject;
-	private Vector2 touchOffset;
+    private GameObject hitObject;
+    private Vector2 touchOffset;
     private bool validItem = false;
     RaycastHit2D[] touches;
     public int targetSortingLayer = 6;
@@ -84,14 +85,15 @@ public class ObjectDragController : MonoBehaviour {
                     if (hit.transform != null)
                     {
                         draggingItem = true;
-                        draggedObject = hit.transform.gameObject;
+                        hitObject = hit.transform.gameObject;
+                        draggedObject = hit.transform.gameObject.transform.parent.parent.gameObject;
                         touchOffset = (Vector2)hit.transform.position - inputPosition;
 
-                        defaultSortingLayer = draggedObject.GetComponent<SpriteRenderer>().sortingOrder;
+                        defaultSortingLayer = hitObject.GetComponent<SpriteRenderer>().sortingOrder;
 
-                        var hitLayer = draggedObject.GetComponent<SpriteRenderer>();
+                        var hitLayer = hitObject.GetComponent<SpriteRenderer>();
                         hitLayer.sortingOrder = targetSortingLayer; //raise item on sorting layer
-                        draggedObject.transform.parent.gameObject.GetComponent<FoodController>().GrabItem();
+                        draggedObject.GetComponent<FoodController>().GrabItem();
                     }
                 }
 
@@ -114,8 +116,8 @@ public class ObjectDragController : MonoBehaviour {
         validItem = false; //no valid item selected
         if (draggedObject != null)
         {
-            draggedObject.GetComponent<SpriteRenderer>().sortingOrder = defaultSortingLayer; //reset sorting layer of dropped item
-            draggedObject.transform.parent.gameObject.GetComponent<FoodController>().DropItem();
+            hitObject.GetComponent<SpriteRenderer>().sortingOrder = defaultSortingLayer; //reset sorting layer of dropped item
+            draggedObject.GetComponent<FoodController>().DropItem();
         }
     }
 	

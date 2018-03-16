@@ -8,6 +8,8 @@ TagManager:
   - BadTarget
   - FoodItem
   - SpawnPoint
+  - BottomEdge
+  - ScreenEdge
   layers:
   - Default
   - TransparentFX
@@ -17,9 +19,9 @@ TagManager:
   - UI
   - 
   - 
-  - 
-  - 
-  - 
+  - foodItem
+  - mouth
+  - screenEdge
   - 
   - 
   - 
