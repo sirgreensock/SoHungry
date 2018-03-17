@@ -31,6 +31,11 @@ public class FoodController : MonoBehaviour {
     }
 
     private SpriteRenderer foodSpriteRenderer;
+    private Sprite foodSprite;
+    public Sprite FoodSprite
+    {
+        get { return foodSprite;  }
+    }
     private string foodID;
     private string spawnID;
     private int foodNumber;
@@ -53,6 +58,8 @@ public class FoodController : MonoBehaviour {
     private float startX;
     private float startY;
     private float startZ;
+
+    public FoodSetup chosenFood;
 
     void OnEnable()
     {
@@ -79,6 +86,8 @@ public class FoodController : MonoBehaviour {
         foodImage.name = foodOptions[foodNumber].foodName;
         foodSpriteRenderer = foodImage.GetComponent<SpriteRenderer>();
         foodSpriteRenderer.sprite = foodOptions[foodNumber].foodSprite;
+        foodSprite = foodOptions[foodNumber].foodSprite;
+        chosenFood = foodOptions[foodNumber];
     }
 
     public void GrabItem()

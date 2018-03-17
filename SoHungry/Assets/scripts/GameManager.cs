@@ -4,10 +4,23 @@ using UnityEngine;
 using UnityEngine.UI;
 using DG.Tweening;
 using TMPro;
+using UnityEngine.SceneManagement;
 
 public class GameManager : MonoBehaviour {
     [SerializeField]
     TextMeshProUGUI timerText;
+
+    [SerializeField]
+    GameObject resultsScreen;
+
+    [SerializeField]
+    GameObject startScreen;
+
+    [SerializeField]
+    Animator yellowCharacter;
+
+    [SerializeField]
+    ResultsScreen resultScreenComponent;
 
     private bool gameStart;
     public bool GameStartBool
@@ -18,14 +31,17 @@ public class GameManager : MonoBehaviour {
     private bool gamePaused;
     private int Timer = 30;
     private SpawnController spawnController;
+    private bool winState;
 
 
-	void Start () {
+    void Start () {
+        startScreen.SetActive(true);
         DOTween.Init(false, true, LogBehaviour.ErrorsOnly);
         spawnController = gameObject.GetComponent<SpawnController>();
         gameStart = false;
         timerText.text = Timer.ToString();
-	}
+        resultsScreen.SetActive(false);
+    }
 	
 	void Update () {
 		if (gameStart)
@@ -45,7 +61,7 @@ public class GameManager : MonoBehaviour {
 
     private void InitGame()
     {
-        //Set up game init components
+        //Set up game init components        
     }
 
     public void StartGame()
@@ -54,6 +70,7 @@ public class GameManager : MonoBehaviour {
         spawnController.SpawningAllowed = true;
         gameStart = true;
         StartCoroutine("TimeCount");
+        
     }
 
     private void TimeControl()
@@ -82,10 +99,31 @@ public class GameManager : MonoBehaviour {
     public void EndGame()
     {
         //do game debrief stuff
-        Debug.Log("Hey game ended!");
         spawnController.SpawningAllowed = false;
         gameStart = false;
-        StopCoroutine("TimeCount");
+        StopCoroutine("TimeCount");        
+        HandleResultScreen();        
+        
+    }
+
+    void HandleResultScreen()
+    {
+        resultsScreen.SetActive(true);
+
+        float endScore = gameObject.GetComponent<ScoreController>().currentScore;        
+
+        if (endScore > 15f)
+        {
+            winState = true;
+            yellowCharacter.SetTrigger("Win");
+        } else
+        {
+            yellowCharacter.SetTrigger("Lose");
+        }
+
+        List <FoodSetup> foodList = gameObject.GetComponent<ScoreController>().FoodsEaten;
+        resultScreenComponent.SetScoreController(gameObject.GetComponent<ScoreController>());
+        resultScreenComponent.HandleResultScreen(winState, endScore, foodList);
     }
 
     private void PauseGame()
@@ -93,8 +131,14 @@ public class GameManager : MonoBehaviour {
         //do pause game stuff
     }
 
-    private void ResetGame()
+    public void ResetGame()
     {
         //Start game over again
+        SceneManager.LoadScene(SceneManager.GetActiveScene().buildIndex);
+    }
+
+    public void QuitGame()
+    {
+        Application.Quit();
     }
 }
