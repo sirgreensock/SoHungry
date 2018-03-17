@@ -101,26 +101,32 @@ public class GameManager : MonoBehaviour {
         //do game debrief stuff
         spawnController.SpawningAllowed = false;
         gameStart = false;
-        StopCoroutine("TimeCount");        
-        HandleResultScreen();        
-        
+        StopCoroutine("TimeCount");
+
+        float endScore = gameObject.GetComponent<ScoreController>().currentScore;
+
+        if (endScore > 15f)
+        {
+            winState = true;
+            yellowCharacter.SetTrigger("Win");
+        }
+        else
+        {
+            yellowCharacter.SetTrigger("Lose");
+        }
+    }
+
+    public void ShowResultScreen()
+    {
+        HandleResultScreen();
     }
 
     void HandleResultScreen()
     {
         resultsScreen.SetActive(true);
 
-        float endScore = gameObject.GetComponent<ScoreController>().currentScore;        
+        float endScore = gameObject.GetComponent<ScoreController>().currentScore;
 
-        if (endScore > 15f)
-        {
-            winState = true;
-            yellowCharacter.SetTrigger("Win");
-        } else
-        {
-            yellowCharacter.SetTrigger("Lose");
-        }
-        
         resultScreenComponent.SetScoreController(gameObject.GetComponent<ScoreController>());
         resultScreenComponent.HandleResultScreen(winState, endScore);
     }

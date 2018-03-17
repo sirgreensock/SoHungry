@@ -22,4 +22,9 @@ public class YellowGuyController : MonoBehaviour {
         gameManager.GameStartBool = true;
         gameManager.StartGame();        
     }
+
+    void GameEnd ()
+    {
+        gameManager.ShowResultScreen();
+    }
 }
