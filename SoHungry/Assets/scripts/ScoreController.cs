@@ -19,11 +19,13 @@ public class ScoreController : MonoBehaviour {
     Sprite neutralFace;
     [SerializeField]
     Sprite happyFace;
+    [SerializeField]
+    Animator yellowDude;
 
     private GameObject heldObject; //object that dropped in mouth
     private float sliderMin = 1.5f; //1.5f = minimum value that looks nice on slider
-    private float gameScore = 1.5f; //starting score
     private float scoreTween; //tween value for slider
+    private float gameScore = 1.5f; //starting score  
 
     public float currentScore        
     {
@@ -33,8 +35,31 @@ public class ScoreController : MonoBehaviour {
             gameScore = value;
         }
     }
-    
-    void Start () {             
+
+    private int goodEats;
+    public int GoodEats
+    {
+        get { return goodEats; }
+        set
+        {
+            goodEats = value;
+        }
+    }
+
+    private int badEats;
+    public int BadEats
+    {
+        get { return badEats; }
+        set
+        {
+            badEats = value;
+        }
+    }
+ 
+    void Start () {
+
+        goodEats = 0;
+        badEats = 0;          
 
         if (mouthCollider != null)
         {            
@@ -64,20 +89,28 @@ public class ScoreController : MonoBehaviour {
     public void GoodTarget(Collider2D heldObject)
     {
         gameScore++;
+        goodEats++;
         gameObject.GetComponent<ObjectDragController>().DropItem();
         heldObject.gameObject.tag = "Untagged";
         gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.parent.gameObject);
+
+        FoodData chosenFood = heldObject.gameObject.transform.parent.parent.gameObject.GetComponent<FoodController>().chosenFood;
+        chosenFood.foodEaten++;
+
         SetScoreSlider(gameScore);
+        yellowDude.SetTrigger("Good");
     }
 
     //Reduce score, set item to reset
     public void BadTarget(Collider2D heldObject)
     {
         gameScore--;
+        badEats++;
         gameObject.GetComponent<ObjectDragController>().DropItem();
         heldObject.gameObject.tag = "Untagged";
         gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.parent.gameObject);
         SetScoreSlider(gameScore);
+        yellowDude.SetTrigger("Bad");
     }
 
     //tweens score value

@@ -22,7 +22,9 @@ public class FoodController : MonoBehaviour {
     [SerializeField]
     GameObject foodImage;
     [SerializeField]
-    List<FoodSetup> foodOptions;    
+    List<FoodData> foodOptions;
+
+    public FoodData chosenFood;
 
     public GameObject FoodImage
     {
@@ -31,6 +33,11 @@ public class FoodController : MonoBehaviour {
     }
 
     private SpriteRenderer foodSpriteRenderer;
+    private Sprite foodSprite;
+    public Sprite FoodSprite
+    {
+        get { return foodSprite;  }
+    }
     private string foodID;
     private string spawnID;
     private int foodNumber;
@@ -52,7 +59,15 @@ public class FoodController : MonoBehaviour {
     private bool enableMovement;
     private float startX;
     private float startY;
-    private float startZ;
+    private float startZ;   
+
+    void Start()
+    {
+        for (int i = 0; i < foodOptions.Count; i++)
+        {
+            foodOptions[i].foodEaten = 0;
+        }
+    }
 
     void OnEnable()
     {
@@ -72,13 +87,14 @@ public class FoodController : MonoBehaviour {
 
 
     private void ChooseFood()
-    {
-        
+    {       
         foodNumber = Random.Range(0, foodOptions.Count);   
         foodImage.tag = foodOptions[foodNumber].foodTag;
         foodImage.name = foodOptions[foodNumber].foodName;
         foodSpriteRenderer = foodImage.GetComponent<SpriteRenderer>();
         foodSpriteRenderer.sprite = foodOptions[foodNumber].foodSprite;
+        foodSprite = foodOptions[foodNumber].foodSprite;
+        chosenFood = foodOptions[foodNumber];
     }
 
     public void GrabItem()
