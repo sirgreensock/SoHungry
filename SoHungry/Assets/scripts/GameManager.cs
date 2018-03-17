@@ -120,10 +120,9 @@ public class GameManager : MonoBehaviour {
         {
             yellowCharacter.SetTrigger("Lose");
         }
-
-        List <FoodSetup> foodList = gameObject.GetComponent<ScoreController>().FoodsEaten;
+        
         resultScreenComponent.SetScoreController(gameObject.GetComponent<ScoreController>());
-        resultScreenComponent.HandleResultScreen(winState, endScore, foodList);
+        resultScreenComponent.HandleResultScreen(winState, endScore);
     }
 
     private void PauseGame()

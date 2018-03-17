@@ -10,6 +10,9 @@ public class ResultsScreen : MonoBehaviour {
     Animator winTransition;
 
     [SerializeField]
+    GameObject loseTransition;
+
+    [SerializeField]
     Image mostEatenFood;
 
     [SerializeField]
@@ -33,7 +36,10 @@ public class ResultsScreen : MonoBehaviour {
     [SerializeField]
     string[] resultMoodString;
 
-    private ScoreController parentScoreController;
+    [SerializeField]
+    private List<FoodData> foodDataList;
+
+    private ScoreController parentScoreController;   
 
     // Use this for initialization
     void Start () {
@@ -50,11 +56,14 @@ public class ResultsScreen : MonoBehaviour {
         parentScoreController = scoreController;
     }
 
-    public void HandleResultScreen(bool winState, float endScore, List<FoodSetup> foodList)
+    public void HandleResultScreen(bool winState, float endScore)
     {
         if (winState)
         {
             winTransition.SetTrigger("Close");
+        } else
+        {
+            loseTransition.SetActive(true);
         }
 
         SetMood(endScore);
@@ -63,14 +72,12 @@ public class ResultsScreen : MonoBehaviour {
         int goodEaten = parentScoreController.GoodEats;
         int badEaten = parentScoreController.BadEats;
 
-        float score = ((endScore - 0.5f) * goodEaten - badEaten ) * 100f;
+        float score = ((endScore - 0.5f) * (goodEaten - badEaten) ) * 100f;
         scoreText.text = score.ToString();
 
         foodsEatenText.text = goodEaten.ToString();
         foodsRejectedText.text = badEaten.ToString();
-
-        Debug.Log(foodList.Count);
-
+        
     }
 
     void SetMood(float endScore)
@@ -98,7 +105,13 @@ public class ResultsScreen : MonoBehaviour {
 
     void SetMostEaten()
     {
+        
+        foodDataList.Sort(delegate (FoodData a, FoodData b)
+        {
+            return (a.foodEaten.CompareTo(b.foodEaten));
+        });
 
+        mostEatenFood.sprite = foodDataList[6].foodSprite;
     }
 
 

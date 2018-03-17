@@ -22,7 +22,9 @@ public class FoodController : MonoBehaviour {
     [SerializeField]
     GameObject foodImage;
     [SerializeField]
-    List<FoodSetup> foodOptions;    
+    List<FoodData> foodOptions;
+
+    public FoodData chosenFood;
 
     public GameObject FoodImage
     {
@@ -57,9 +59,15 @@ public class FoodController : MonoBehaviour {
     private bool enableMovement;
     private float startX;
     private float startY;
-    private float startZ;
+    private float startZ;   
 
-    public FoodSetup chosenFood;
+    void Start()
+    {
+        for (int i = 0; i < foodOptions.Count; i++)
+        {
+            foodOptions[i].foodEaten = 0;
+        }
+    }
 
     void OnEnable()
     {
@@ -79,8 +87,7 @@ public class FoodController : MonoBehaviour {
 
 
     private void ChooseFood()
-    {
-        
+    {       
         foodNumber = Random.Range(0, foodOptions.Count);   
         foodImage.tag = foodOptions[foodNumber].foodTag;
         foodImage.name = foodOptions[foodNumber].foodName;

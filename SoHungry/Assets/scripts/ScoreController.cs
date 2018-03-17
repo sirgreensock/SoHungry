@@ -55,12 +55,6 @@ public class ScoreController : MonoBehaviour {
             badEats = value;
         }
     }
-
-    private List<FoodSetup> foodsEaten = new List<FoodSetup>();
-    public List<FoodSetup> FoodsEaten
-    {
-        get { return foodsEaten;  }
-    }
  
     void Start () {
 
@@ -99,10 +93,10 @@ public class ScoreController : MonoBehaviour {
         gameObject.GetComponent<ObjectDragController>().DropItem();
         heldObject.gameObject.tag = "Untagged";
         gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.parent.gameObject);
-        FoodSetup chosenFood = heldObject.gameObject.transform.parent.parent.gameObject.GetComponent<FoodController>().chosenFood;
-        FoodSetup eatenFood = new FoodSetup();
-        eatenFood.foodSprite = chosenFood.foodSprite;
-        foodsEaten.Add(eatenFood);
+
+        FoodData chosenFood = heldObject.gameObject.transform.parent.parent.gameObject.GetComponent<FoodController>().chosenFood;
+        chosenFood.foodEaten++;
+
         SetScoreSlider(gameScore);
         yellowDude.SetTrigger("Good");
     }

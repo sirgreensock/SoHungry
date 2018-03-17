@@ -222,34 +222,14 @@ MonoBehaviour:
   foodAnimator: {fileID: 1950729018723216}
   foodImage: {fileID: 1221020352603908}
   foodOptions:
-  - foodName: Chocolate Strawberry
-    foodTag: GoodTarget
-    foodSprite: {fileID: 21300006, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-    foodOutline: {fileID: 21300008, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Jam Cookie
-    foodTag: GoodTarget
-    foodSprite: {fileID: 21300010, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-    foodOutline: {fileID: 21300012, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Broccoli
-    foodTag: BadTarget
-    foodSprite: {fileID: 21300002, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-    foodOutline: {fileID: 21300004, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Pizza
-    foodTag: BadTarget
-    foodSprite: {fileID: 21300014, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-    foodOutline: {fileID: 21300016, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Sandwich
-    foodTag: BadTarget
-    foodSprite: {fileID: 21300018, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-    foodOutline: {fileID: 21300020, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Strawberry Tart
-    foodTag: GoodTarget
-    foodSprite: {fileID: 21300022, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-    foodOutline: {fileID: 21300024, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-  - foodName: Watermelon
-    foodTag: GoodTarget
-    foodSprite: {fileID: 21300026, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
-    foodOutline: {fileID: 21300028, guid: c95ea622bdd10c7408a315a5d053abc9, type: 3}
+  - {fileID: 11400000, guid: 4d64df40f37fa464caa47415f4fe5847, type: 2}
+  - {fileID: 11400000, guid: dbe18b4575e2f484497fbca6fc9458fc, type: 2}
+  - {fileID: 11400000, guid: 82ca8c300db29e3409e5b82368e218af, type: 2}
+  - {fileID: 11400000, guid: a66bfbf8ba075aa458c4c23b666d908e, type: 2}
+  - {fileID: 11400000, guid: 9c5a24b9081418341b2790c66276eec5, type: 2}
+  - {fileID: 11400000, guid: 87cf0cd0ce6c8974d8eb38d7d921cffc, type: 2}
+  - {fileID: 11400000, guid: fdb5d8eaf01fa814f8bfafd605cc07ca, type: 2}
+  chosenFood: {fileID: 0}
 --- !u!212 &212212459838750418
 SpriteRenderer:
   m_ObjectHideFlags: 1
