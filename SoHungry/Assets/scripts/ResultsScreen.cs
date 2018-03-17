@@ -13,6 +13,9 @@ public class ResultsScreen : MonoBehaviour {
     GameObject loseTransition;
 
     [SerializeField]
+    Animator resultWindow;
+
+    [SerializeField]
     Image mostEatenFood;
 
     [SerializeField]
@@ -61,9 +64,11 @@ public class ResultsScreen : MonoBehaviour {
         if (winState)
         {
             winTransition.SetTrigger("Close");
+            resultWindow.SetTrigger("Good");
         } else
         {
             loseTransition.SetActive(true);
+            resultWindow.SetTrigger("Bad");
         }
 
         SetMood(endScore);
