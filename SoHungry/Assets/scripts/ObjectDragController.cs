@@ -3,6 +3,8 @@ using System.Collections.Generic;
 using UnityEngine;
 
 public class ObjectDragController : MonoBehaviour {
+    [SerializeField]
+    GameManager gameManager;
 
 	private bool draggingItem = false;
 	private GameObject draggedObject;
@@ -84,6 +86,8 @@ public class ObjectDragController : MonoBehaviour {
                     //if item is draggable, drags item
                     if (hit.transform != null)
                     {
+                        gameManager.mainAudioController.PlayAudioClip("pickup");
+
                         draggingItem = true;
                         hitObject = hit.transform.gameObject;
                         draggedObject = hit.transform.gameObject.transform.parent.parent.gameObject;

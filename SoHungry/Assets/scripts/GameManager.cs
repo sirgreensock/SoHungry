@@ -22,6 +22,10 @@ public class GameManager : MonoBehaviour {
     [SerializeField]
     ResultsScreen resultScreenComponent;
 
+    public AudioController mainAudioController;
+
+    public AudioController characterAudioController;
+
     private bool gameStart;
     public bool GameStartBool
     {
@@ -69,6 +73,7 @@ public class GameManager : MonoBehaviour {
         //Begin game logic
         spawnController.SpawningAllowed = true;
         gameStart = true;
+      //  characterAudioController.PlayAudioClip("sohungry");
         StartCoroutine("TimeCount");
         
     }
@@ -109,10 +114,12 @@ public class GameManager : MonoBehaviour {
         {
             winState = true;
             yellowCharacter.SetTrigger("Win");
+            mainAudioController.PlayAudioClip("win");
         }
         else
         {
             yellowCharacter.SetTrigger("Lose");
+            mainAudioController.PlayAudioClip("lose");
         }
     }
 
