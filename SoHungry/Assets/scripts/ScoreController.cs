@@ -21,6 +21,8 @@ public class ScoreController : MonoBehaviour {
     Sprite happyFace;
     [SerializeField]
     Animator yellowDude;
+    [SerializeField]
+    GameManager gameManager;
 
     private GameObject heldObject; //object that dropped in mouth
     private float sliderMin = 1.5f; //1.5f = minimum value that looks nice on slider
@@ -99,6 +101,7 @@ public class ScoreController : MonoBehaviour {
 
         SetScoreSlider(gameScore);
         yellowDude.SetTrigger("Good");
+        gameManager.characterAudioController.PlayAudioClip("yum");
     }
 
     //Reduce score, set item to reset
@@ -111,6 +114,7 @@ public class ScoreController : MonoBehaviour {
         gameObject.GetComponent<SpawnController>().ResetItem(heldObject.gameObject.transform.parent.parent.gameObject);
         SetScoreSlider(gameScore);
         yellowDude.SetTrigger("Bad");
+        gameManager.characterAudioController.PlayAudioClip("ew");
     }
 
     //tweens score value
