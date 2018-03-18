@@ -48,7 +48,14 @@ public class GameManager : MonoBehaviour {
     }
 	
 	void Update () {
-		if (gameStart)
+
+        if (Input.GetKeyDown(KeyCode.Escape))
+        {
+            Application.Quit();
+        }
+            
+
+        if (gameStart)
         {
             //Do game stuff            
         } else
